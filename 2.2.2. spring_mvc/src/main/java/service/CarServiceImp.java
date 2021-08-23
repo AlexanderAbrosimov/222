@@ -9,8 +9,7 @@ public class CarServiceImp implements CarService{
 
 
 
-    @Override
-    public List<Car> subCarList(int count) {
+    public static List<Car> subCarList(int count) {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("Car1", "Type1", 1));
         cars.add(new Car("Car2", "Type2", 2));

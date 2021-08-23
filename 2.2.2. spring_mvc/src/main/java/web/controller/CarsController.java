@@ -12,13 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static service.CarServiceImp.subCarList;
+
 @Controller
 public class CarsController {
-    private CarService carService = new CarServiceImp();
 
     @GetMapping(value = "/cars")
     public String sayHello(@RequestParam("count") Optional<Integer> count, ModelMap model) {
-        model.addAttribute("message", carService.subCarList(count.orElse(5)));
+        model.addAttribute("message", subCarList(count.orElse(5)));
         return "cars";
     }
 }
